@@ -1,0 +1,54 @@
+{"level":"info","message":"Hello from Acquisitions Service!","service":"acquisitions-api","timestamp":"2025-11-30T22:27:31.638Z"}
+{"level":"info","message":"::1 - - [30/Nov/2025:22:27:31 +0000] \"GET / HTTP/1.1\" 200 32 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-11-30T22:27:31.650Z"}
+{"level":"info","message":"Hello from Acquisitions Service!","service":"acquisitions-api","timestamp":"2025-11-30T22:27:33.329Z"}
+{"level":"info","message":"::1 - - [30/Nov/2025:22:27:33 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-11-30T22:27:33.331Z"}
+{"level":"info","message":"Hello from Acquisitions Service!","service":"acquisitions-api","timestamp":"2025-12-01T16:35:13.032Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:35:13 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-12-01T16:35:13.040Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:35:54 +0000] \"GET /api/auth/sign-in HTTP/1.1\" 404 155 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-12-01T16:35:54.772Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:42:06 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api","timestamp":"2025-12-01T16:42:06.577Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:43:46 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T16:43:46.744Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:44:04 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T16:44:04.281Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:16:44:20 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 32 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T16:44:20.653Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:19:44:35 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 94 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T19:44:35.040Z"}
+{"level":"info","message":"User signed up with email: abdeerbusiness@gmail.com","service":"acquisitions-api","timestamp":"2025-12-01T19:47:02.392Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:19:47:02 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 121 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T19:47:02.398Z"}
+{"level":"error","message":"Error creating user: Failed query: select  from $1 where \"users\".\"email\" = $2 limit $3\nparams: users,abdeerbusiness@gmail.com,1","service":"acquisitions-api","timestamp":"2025-12-01T20:21:25.952Z"}
+{"level":"error","message":"Error in signup controller: Error creating user: Failed query: select  from $1 where \"users\".\"email\" = $2 limit $3\nparams: users,abdeerbusiness@gmail.com,1","service":"acquisitions-api","timestamp":"2025-12-01T20:21:25.963Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:20:21:25 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 675 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T20:21:25.967Z"}
+{"level":"info","message":"Created new user with email: abdeerbusiness@gmail.com","service":"acquisitions-api","timestamp":"2025-12-01T20:24:46.982Z"}
+{"level":"info","message":"User signed up with email: abdeerbusiness@gmail.com","service":"acquisitions-api","timestamp":"2025-12-01T20:24:46.987Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:20:24:46 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 121 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T20:24:46.990Z"}
+{"level":"error","message":"Error authenticating user: Invalid email or password.","service":"acquisitions-api","timestamp":"2025-12-01T20:48:22.532Z"}
+{"level":"error","message":"Error in signin controller: Invalid email or password.","service":"acquisitions-api","timestamp":"2025-12-01T20:48:22.537Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:20:48:22 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 401 40 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T20:48:22.544Z"}
+{"level":"info","message":"User authenticated with email: abdeerbusiness@gmail.com","service":"acquisitions-api","timestamp":"2025-12-01T20:49:10.751Z"}
+{"level":"info","message":"User signed in with email: abdeerbusiness@gmail.com","service":"acquisitions-api","timestamp":"2025-12-01T20:49:10.754Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:20:49:10 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 121 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T20:49:10.756Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:26:34 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:26:34.204Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:16 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:16.332Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:16 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:16.486Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:16 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:16.633Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:16 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:16.791Z"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:16 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:16.936Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.156Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:17 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.158Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.394Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:17 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.395Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.516Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:17 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.517Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.676Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:17 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.677Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.868Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:17 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:17.869Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.027Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.029Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.149Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.149Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.277Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.278Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.395Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.396Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.656Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.657Z"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","method":"GET","path":"/health","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.835Z","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [01/Dec/2025:21:29:18 +0000] \"GET /health HTTP/1.1\" 429 70 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-12-01T21:29:18.836Z"}
