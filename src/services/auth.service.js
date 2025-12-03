@@ -21,9 +21,11 @@ export const createUser = async (name, email, password, role) => {
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
-      
-    if (existingUser.length > 0)
+
+    if (existingUser.length > 0) {
+      logger.error('User with this email already exists: ' + email);
       throw new Error('User with this email already exists.');
+    }
 
     // hash password
     const hashedPassword = await hashPassword(password);
@@ -66,14 +68,12 @@ export const authenticateUser = async (email, password) => {
       .where(eq(users.email, email))
       .limit(1);
 
-    if (!user)
-      throw new Error('Invalid email or password.');
+    if (!user) throw new Error('Invalid email or password.');
 
     // validate password
     const isPasswordValid = await comparePassword(password, user.password);
 
-    if (!isPasswordValid)
-      throw new Error('Invalid email or password.');
+    if (!isPasswordValid) throw new Error('Invalid email or password.');
 
     // return user without password
     logger.info(`User authenticated with email: ${email}`);

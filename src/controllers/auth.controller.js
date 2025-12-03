@@ -13,16 +13,11 @@ export const signup = async (req, res, next) => {
         error: 'Invalid input data.',
         details: formatValidationErrors(validationResult.error),
       });
-    // Proceed with signup logic (e.g., save user to database)
     const { name, email, password, role } = validationResult.data;
-    // auth service to create user
     const user = await createUser(name, email, password, role);
-    const token = jwttoken.sign({
-      userId: user.id,
-      email: user.email,
-      role: user.role,
-    });
 
+    // Issue JWT and set in cookie
+    const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
     cookies.set(res, 'token', token);
 
     logger.info(`User signed up with email: ${email}`);
@@ -55,15 +50,10 @@ export const signin = async (req, res, next) => {
 
     const { email, password } = validationResult.data;
 
-    // authenticate user
     const user = await authenticateUser(email, password);
 
-    const token = jwttoken.sign({
-      userId: user.id,
-      email: user.email,
-      role: user.role,
-    });
-
+    // Issue JWT and set in cookie
+    const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
     cookies.set(res, 'token', token);
 
     logger.info(`User signed in with email: ${email}`);
@@ -87,6 +77,7 @@ export const signin = async (req, res, next) => {
 
 export const signout = async (req, res, next) => {
   try {
+    // Clear auth cookie
     cookies.clear(res, 'token');
 
     logger.info('User signed out successfully');
